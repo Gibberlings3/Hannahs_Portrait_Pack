@@ -1,0 +1,27 @@
+BACKUP ~hannah_portraits/backup~
+SUPPORT ~https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/~
+
+VERSION ~v2~
+
+ALWAYS
+
+  ACTION_IF NOT VARIABLE_IS_SET cd_always THEN BEGIN // check to make this happen only once per install
+    
+	OUTER_SET cd_always = 1
+	INCLUDE ~hannah_portraits/lib/cd_portrait_copy.tph~
+  
+  END
+
+END
+
+README ~hannah_portraits/readme-hannah_portraits.html~
+
+LANGUAGE ~English~ ~english~ ~hannah_portraits/english/setup.tra~
+
+BEGIN @0 DESIGNATED 10
+
+ACTION_FOR_EACH file IN ~hw#dar1~ ~hw#dar2~ ~hw#drow~ ~hw#elf~ ~hw#fair~ ~hw#man~ BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = "%file%" source_path = "hannah_portraits/portraits" END
+
+END
