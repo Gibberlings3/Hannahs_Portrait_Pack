@@ -1,4 +1,4 @@
-BACKUP ~hannah_portraits/backup~
+BACKUP ~weidu_external/hannah_portraits/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/~
 
 VERSION ~v3~
@@ -17,9 +17,11 @@ END
 README ~hannah_portraits/readme-hannah_portraits-%LANGUAGE%.html~ ~hannah_portraits/readme-hannah_portraits.html~
 
 LANGUAGE ~English~  ~english~ ~hannah_portraits/lang/english/setup.tra~
-LANGUAGE ~Francais~ ~french~  ~hannah_portraits/lang/french/setup.tra~
+LANGUAGE ~Francais~ ~french~  ~hannah_portraits/lang/english/setup.tra~
+                              ~hannah_portraits/lang/french/setup.tra~
 
 BEGIN @0 DESIGNATED 10
+LABEL ~cd_hannah_portraits~
 
 ACTION_FOR_EACH file IN ~hw#dar1~ ~hw#dar2~ ~hw#drow~ ~hw#elf~ ~hw#fair~ ~hw#man~ BEGIN
 
